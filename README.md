@@ -25,6 +25,8 @@ Risk reports:
 
 Microsoft provides this [article][3] with tips for simulating risk events. For example, simulating [anonymous IP address][5] using Tor browser to access https://myapps.microsoft.com/ (set the Risk level to `Low` in the dashboard).
 
+<img src=".img/entra-signin-risk.png" />
+
 ## Cloud Apps
 
 Cloud Apps such as Docusign and AWS.
