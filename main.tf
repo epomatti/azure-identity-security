@@ -16,3 +16,8 @@ module "users" {
   entraid_tenant_domain = var.entraid_tenant_domain
   generic_password      = var.generic_password
 }
+
+module "conditional_access" {
+  source    = "./modules/conditional-access/mfa"
+  group_ids = module.users.group_ids
+}
