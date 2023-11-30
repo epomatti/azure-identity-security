@@ -19,7 +19,9 @@ terraform apply -auto-approve
 
 ## Conditional Access
 
-Must disable [security defaults][4].
+A conditional access will be create with `Report-only` functionality. Change to `On` when ready.
+
+This policy will require MFA when for risky logins.
 
 ## Identity Protection
 
