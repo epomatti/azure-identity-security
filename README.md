@@ -4,7 +4,15 @@ Security implementation for various services from the Azure Identity domain.
 
 ## Setup
 
+Initiate the baseline resources:
+
+> You must disable [security defaults][4] to use conditional access.
+
 ```sh
+# Set up according to your Tenant
+cp config/sample.tfvars .auto.tfvars
+
+# Create the resources
 terraform init
 terraform apply -auto-approve
 ```
