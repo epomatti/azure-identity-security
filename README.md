@@ -1,5 +1,6 @@
-# azure-conditional-access
+# Azure Identity security
 
+Security implementation for various services from the Azure Identity domain.
 
 ## Setup
 
