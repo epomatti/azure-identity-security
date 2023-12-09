@@ -17,6 +17,26 @@ terraform init
 terraform apply -auto-approve
 ```
 
+## Password rest
+
+### Self-service password reset
+
+You can configure this: `None`, `Selected`, `All`
+
+### Authentication methods
+
+Number of methods required to reset (1 or 2), and the methods available.
+
+<img src=".img/entra-password.png" />
+
+### Registration
+
+Require users to register when signing in, number of days before users are asked to re-confirm their authentication information.
+
+### On-premises integration
+
+<img src=".img/entra-password-onpremises-integration.png" />
+
 ## Conditional Access
 
 A conditional access will be create with `Report-only` functionality. Change to `On` when ready.
