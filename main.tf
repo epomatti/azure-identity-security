@@ -1,9 +1,5 @@
 terraform {
   required_providers {
-    # azurerm = {
-    #   source  = "hashicorp/azurerm"
-    #   version = "3.82.0"
-    # }
     azuread = {
       source  = "hashicorp/azuread"
       version = "2.46.0"
@@ -20,4 +16,9 @@ module "users" {
 module "conditional_access" {
   source    = "./modules/conditional-access/mfa"
   group_ids = module.users.group_ids
+}
+
+module "named_location" {
+  source    = "./modules/conditional-access/named-location"
+  ip_ranges = var.conditional_policy_named_location_ips
 }

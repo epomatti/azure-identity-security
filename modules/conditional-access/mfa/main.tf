@@ -7,8 +7,23 @@ resource "azuread_conditional_access_policy" "terraform" {
 
     # Users
     users {
-      included_users = ["GuestsOrExternalUsers"]
+      included_users = []
       excluded_users = []
+
+      included_guests_or_external_users {
+        guest_or_external_user_types = [
+          "internalGuest",
+          "b2bCollaborationGuest",
+          "b2bCollaborationMember",
+          "b2bDirectConnectUser",
+          "otherExternalUser",
+          "serviceProvider",
+        ]
+        external_tenants {
+          members         = []
+          membership_kind = "all"
+        }
+      }
 
       included_groups = var.group_ids
       excluded_groups = []
@@ -24,12 +39,19 @@ resource "azuread_conditional_access_policy" "terraform" {
     }
 
     # Conditions
-    user_risk_levels    = ["low", "medium", "high"]
-    sign_in_risk_levels = ["low", "medium", "high"]
+    user_risk_levels    = ["high", "medium", "low"]
+    sign_in_risk_levels = ["high", "medium", "low"]
 
     platforms {
       included_platforms = ["all"]
-      excluded_platforms = []
+
+      # Not sure why Entra keeps adding these
+      excluded_platforms = [
+        "android",
+        "iOS",
+        "macOS",
+        "linux",
+      ]
     }
 
     locations {
@@ -37,7 +59,8 @@ resource "azuread_conditional_access_policy" "terraform" {
       excluded_locations = ["AllTrusted"]
     }
 
-    client_app_types = ["all"]
+    # Control user access to target specific client applications not using modern authentication.
+    client_app_types = ["exchangeActiveSync", "browser", "mobileAppsAndDesktopClients", "other"]
 
     devices {
       filter {
