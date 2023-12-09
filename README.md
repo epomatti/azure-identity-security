@@ -2,6 +2,8 @@
 
 Security implementation for various services from the Azure Identity domain.
 
+> ⚠️ If you disable security defaults to test conditional access, don't forget to re-enable it
+
 ## Setup
 
 Initiate the baseline resources:
@@ -81,6 +83,16 @@ Must have `All cloud apps` enabled.
 ### Continuous Access Evaluation (CAE)
 
 > Continuous Access Evaluation (CAE) allows access tokens to be revoked based on critical events and policy evaluation in real time rather than relying on token expiration based on lifetime.
+
+-- 
+
+### Clean-up
+
+> ⚠️ If you disable security defaults to test conditional access, don't forget to re-enable it
+
+```sh
+terraform destroy -auto-approve
+```
 
 [1]: https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-investigate-risk
 [2]: https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/combatting-risky-sign-ins-in-azure-active-directory/ba-p/3724786#:~:text=For%20each%20risky%20sign%20in,risk%2C%20risk%20history%20of%20users.
