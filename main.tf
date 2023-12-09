@@ -22,3 +22,8 @@ module "named_location" {
   source    = "./modules/conditional-access/named-location"
   ip_ranges = var.conditional_policy_named_location_ips
 }
+
+module "access_review" {
+  source                = "./modules/access-review"
+  entraid_tenant_domain = var.entraid_tenant_domain
+}

@@ -7,6 +7,12 @@ variable "generic_password" {
   sensitive = true
 }
 
+variable "create_conditional_policy" {
+  description = "Rather or not to create the policy, since it requires security defaults to be disabled."
+  type        = bool
+  default     = false
+}
+
 variable "conditional_policy_named_location_ips" {
   type = list(string)
 }

@@ -39,11 +39,26 @@ Require users to register when signing in, number of days before users are asked
 
 <img src=".img/entra-password-onpremises-integration.png" />
 
-## Conditional Access
+## Access Reviews
 
-A conditional access will be create with `Report-only` functionality. Change to `On` when ready.
+What to review:
+- Teams + Groups
+  - All Microsoft 365 groups with guest users
+  - Select Teams + Groups 
+- Applications
 
-This policy will require MFA when for risky logins.
+It is possible to create multi-stage.
+
+Reviewers:
+
+- Group owners(s)
+- Selected user(s) or group(s)
+- Users review their own access - if they can't, group owner reviews
+- Managers of users
+
+Recurrence is set.
+
+Settings are then configured such as apply or not the results to resource, no response behavior, notifications, justifications, etc.
 
 ## Identity Protection
 
@@ -65,6 +80,10 @@ For example, simulating [anonymous IP address][5] using Tor browser to access ht
 <img src=".img/entra-signin-risk.png" />
 
 ## Conditional Access
+
+A conditional access will be create with `Report-only` functionality. Change to `On` when ready.
+
+This policy will require MFA when for risky logins.
 
 ### Cloud Apps
 
