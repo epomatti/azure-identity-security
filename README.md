@@ -50,13 +50,17 @@ Cloud Apps such as Docusign and AWS.
 
 ### Sign-in frequency
 
-fasdf
+Options such as periodic authentication (hours, days) or every time.
 
 ### Persistent Browser Session
+
+> A persistent browser session allows users to remain signed in after closing and reopening their browser window.
 
 Must have `All cloud apps` enabled.
 
 ### Continuous Access Evaluation (CAE)
+
+> Continuous Access Evaluation (CAE) allows access tokens to be revoked based on critical events and policy evaluation in real time rather than relying on token expiration based on lifetime.
 
 [1]: https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-investigate-risk
 [2]: https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/combatting-risky-sign-ins-in-azure-active-directory/ba-p/3724786#:~:text=For%20each%20risky%20sign%20in,risk%2C%20risk%20history%20of%20users.
