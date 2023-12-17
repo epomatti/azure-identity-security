@@ -139,6 +139,14 @@ By accessing "All Users" > "Per-user MFA":
 
 <img src=".img/entra-mfa-peruser.png" />
 
+## MFA Licenses
+
+Different methods are available to [license MFA][8] on Entra:
+
+> Microsoft Entra multifactor authentication can be used, and licensed, in a few different ways depending on your organization's needs. All tenants are entitled to basic multifactor authentication features via Security Defaults. You may already be entitled to use advanced Microsoft Entra multifactor authentication depending on the Microsoft Entra ID, EMS, or Microsoft 365 license you currently have. For example, the first 50,000 monthly active users in Microsoft Entra External ID can use MFA and other Premium P1 or P2 features for free.
+
+It is worth pointing out that on PIM, MFA enablement will override per-user settings.
+
 ---
 
 ### Clean-up
@@ -156,3 +164,4 @@ terraform destroy -auto-approve
 [5]: https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-simulate-risk#anonymous-ip-address
 [6]: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-users-groups#exclude-users
 [7]: https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-userstates#microsoft-entra-multifactor-authentication-user-states
+[8]: https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-licensing#available-versions-of-microsoft-entra-multifactor-authentication
