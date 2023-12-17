@@ -103,6 +103,12 @@ Must have `All cloud apps` enabled.
 
 > Continuous Access Evaluation (CAE) allows access tokens to be revoked based on critical events and policy evaluation in real time rather than relying on token expiration based on lifetime.
 
+## MFA Policy
+
+There is also a dedicated available MFA policy:
+
+<img src=".img/entra-mfa.png" />
+
 ---
 
 ### Clean-up
