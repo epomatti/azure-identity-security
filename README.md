@@ -60,6 +60,12 @@ Recurrence is set.
 
 Settings are then configured such as apply or not the results to resource, no response behavior, notifications, justifications, etc.
 
+## Policy exclusions
+
+It is important to remind that inclusions are overwritten by [exclusions][6]:
+
+> When organizations both include and exclude a user or group, the user or group is excluded from the policy. The exclude action overrides the include action in policy. Exclusions are commonly used for emergency access or break-glass accounts.
+
 ## Identity Protection
 
 Risk reports:
@@ -132,3 +138,4 @@ terraform destroy -auto-approve
 [3]: https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-simulate-risk
 [4]: https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults#protect-privileged-activities-like-access-to-the-azure-portal
 [5]: https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-simulate-risk#anonymous-ip-address
+[6]: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-users-groups#exclude-users
