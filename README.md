@@ -123,6 +123,22 @@ To reach the MFA additional settings hot site:
 
 <img src=".img/entra-mfa-additional.png" />
 
+## MFA Statues
+
+Users can have the following [MFA statuses][7]:
+
+- **Disabled (default)** - User not enrolled in per-user Microsoft Entra MFA. Does not affect Legacy, browser, or modern.
+- **Enabled** - User is enrolled in per-user Microsoft Entra MFA, but can still use password for legacy authentication. Will be prompted to register for modern authentication when session or token expires.
+- **Enforced** - User is enrolled per-user Microsoft Entra MFA and must sign-in with MFA.
+
+Importantly:
+
+> Don't enable or enforce per-user Microsoft Entra multifactor authentication if you use Conditional Access policies.
+
+By accessing "All Users" > "Per-user MFA":
+
+<img src=".img/entra-mfa-peruser.png" />
+
 ---
 
 ### Clean-up
@@ -139,3 +155,4 @@ terraform destroy -auto-approve
 [4]: https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults#protect-privileged-activities-like-access-to-the-azure-portal
 [5]: https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-simulate-risk#anonymous-ip-address
 [6]: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-users-groups#exclude-users
+[7]: https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-userstates#microsoft-entra-multifactor-authentication-user-states
