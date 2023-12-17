@@ -109,6 +109,14 @@ There is also a dedicated available MFA policy:
 
 <img src=".img/entra-mfa.png" />
 
+## MFA Additional Settings
+
+To reach the MFA additional settings hot site:
+
+<img src=".img/entra-mfa-additional-init.png" />
+
+<img src=".img/entra-mfa-additional.png" />
+
 ---
 
 ### Clean-up
