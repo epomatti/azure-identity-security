@@ -147,6 +147,18 @@ Different methods are available to [license MFA][8] on Entra:
 
 It is worth pointing out that on PIM, MFA enablement will override per-user settings.
 
+## Custom Roles
+
+Custom roles will be created.
+
+**Entra ID** actions allow only for granted permissions.
+
+**Azure RM** actions have the capability for `Action` (allow) and `Not Action` (deny).
+
+Custom roles can also be shared across different subscriptions that trust the same Microsoft Entra tenant. For example, the assignable scope can ge set to a **Management Group**.
+
+Current [limits][9] are **5,000** custom roles per tenant. 
+
 ---
 
 ### Clean-up
@@ -165,3 +177,4 @@ terraform destroy -auto-approve
 [6]: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-users-groups#exclude-users
 [7]: https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-userstates#microsoft-entra-multifactor-authentication-user-states
 [8]: https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-licensing#available-versions-of-microsoft-entra-multifactor-authentication
+[9]: https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles

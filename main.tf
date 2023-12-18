@@ -2,7 +2,11 @@ terraform {
   required_providers {
     azuread = {
       source  = "hashicorp/azuread"
-      version = "2.46.0"
+      version = "2.47.0"
+    }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "3.85.0"
     }
   }
 }
@@ -26,4 +30,12 @@ module "named_location" {
 module "access_review" {
   source                = "./modules/access-review"
   entraid_tenant_domain = var.entraid_tenant_domain
+}
+
+module "custom_role_entra" {
+  source = "./modules/custom-roles/entra"
+}
+
+module "custom_role_azure_resource_manager" {
+  source = "./modules/custom-roles/arm"
 }
