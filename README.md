@@ -169,7 +169,9 @@ Custom roles will be created.
 
 Custom roles can also be shared across different subscriptions that trust the same Microsoft Entra tenant. For example, the assignable scope can ge set to a **Management Group**.
 
-Current [limits][9] are **5,000** custom roles per tenant. 
+Current [limits][9] are **5,000** custom roles per tenant.
+
+There are also relevant [prerequisites][12].
 
 ---
 
@@ -192,3 +194,4 @@ terraform destroy -auto-approve
 [9]: https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles
 [10]: https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-sync-attributes-synchronized
 [11]: https://myaccess.microsoft.com/
+[12]: https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/custom-create#prerequisites
