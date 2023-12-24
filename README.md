@@ -70,6 +70,8 @@ Settings are then configured such as:
 - Justifications
 - etc.
 
+Reviewers can access the access reviews on the [My Access][11] portal.
+
 ## Policy exclusions
 
 It is important to remind that inclusions are overwritten by [exclusions][6]:
@@ -189,3 +191,4 @@ terraform destroy -auto-approve
 [8]: https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-licensing#available-versions-of-microsoft-entra-multifactor-authentication
 [9]: https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles
 [10]: https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-sync-attributes-synchronized
+[11]: https://myaccess.microsoft.com/
