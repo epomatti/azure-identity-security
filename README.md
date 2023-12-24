@@ -54,11 +54,21 @@ Reviewers:
 - Group owners(s)
 - Selected user(s) or group(s)
 - Users review their own access - if they can't, group owner reviews
-- Managers of users
+- Managers of users ([synced attribute][10] from Active Directory)
 
 Recurrence is set.
 
-Settings are then configured such as apply or not the results to resource, no response behavior, notifications, justifications, etc.
+Settings are then configured such as:
+
+- Apply or not the results to resource
+- No response behavior
+  - No change
+  - Remove access
+  - Approve access
+  - Take recommendations
+- Notifications
+- Justifications
+- etc.
 
 ## Policy exclusions
 
@@ -178,3 +188,4 @@ terraform destroy -auto-approve
 [7]: https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-userstates#microsoft-entra-multifactor-authentication-user-states
 [8]: https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-licensing#available-versions-of-microsoft-entra-multifactor-authentication
 [9]: https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles
+[10]: https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-sync-attributes-synchronized
