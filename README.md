@@ -173,6 +173,20 @@ Current [limits][9] are **5,000** custom roles per tenant.
 
 There are also relevant [prerequisites][12].
 
+## Scenarios
+
+### Adding objects to a Security Group
+
+It's possible to add the following objects to a Security Group:
+
+- Users
+- Security Groups
+- Devices
+- Enterprise Applications
+- Managed Identities
+
+You **cannot** add Application Registrations, they must be enterprise.
+
 ---
 
 ### Clean-up

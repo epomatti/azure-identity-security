@@ -39,3 +39,10 @@ module "custom_role_entra" {
 module "custom_role_azure_resource_manager" {
   source = "./modules/custom-roles/arm"
 }
+
+
+### Scenarios ###
+module "scenario_adding_stuff_to_groups" {
+  source                = "./modules/scenarios/adding-stuff-to-groups"
+  entraid_tenant_domain = var.entraid_tenant_domain
+}
