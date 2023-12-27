@@ -46,3 +46,7 @@ module "scenario_adding_stuff_to_groups" {
   source                = "./modules/scenarios/adding-stuff-to-groups"
   entraid_tenant_domain = var.entraid_tenant_domain
 }
+
+module "scenario_group_nesting" {
+  source = "./modules/scenarios/group-nesting"
+}

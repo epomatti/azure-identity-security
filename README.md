@@ -189,6 +189,22 @@ It's possible to add the following objects to a Security Group:
 
 You **cannot** add Application Registrations, they must be enterprise.
 
+### Group nesting
+
+For this scenario, the following groups are created:
+
+| Name | Type | Assignable to Entra ID roles |
+|----------|----------|----------|
+| NestingGroup1 | Microsoft 365 group | Yes |
+| NestingGroup2 | Security group      | No  |
+| NestingGroup3 | Security group      | Yes |
+| NestingGroup4 | Security group      | Yes |
+
+In this scenario, this is currently prohibited:
+
+1. Cannot nest Microsoft 365 into other groups.
+2. Cannot nest groups into Entra ID assignable groups.
+
 ---
 
 ### Clean-up
