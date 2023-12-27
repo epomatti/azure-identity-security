@@ -175,6 +175,8 @@ There are also relevant [prerequisites][12].
 
 ## Scenarios
 
+The following additional scenarios are implemented in this project.
+
 ### Adding objects to a Security Group
 
 It's possible to add the following objects to a Security Group:
