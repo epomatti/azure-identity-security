@@ -40,6 +40,17 @@ module "custom_role_azure_resource_manager" {
   source = "./modules/custom-roles/arm"
 }
 
+resource "azurerm_resource_group" "lifecycleworkflow" {
+  name     = "rg-lifecycleworkflow"
+  location = var.location
+}
+
+module "lifecycle_workflow" {
+  source                = "./modules/lifecycle-workflow"
+  entraid_tenant_domain = var.entraid_tenant_domain
+  location              = var.location
+  resource_group_name   = azurerm_resource_group.lifecycleworkflow.name
+}
 
 ### Scenarios ###
 module "scenario_adding_stuff_to_groups" {

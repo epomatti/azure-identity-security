@@ -205,6 +205,50 @@ In this scenario, this is currently prohibited:
 1. Cannot nest Microsoft 365 into other groups.
 2. Cannot nest groups into Entra ID assignable groups.
 
+## Governance
+
+To use all governance features, an additional **Microsoft Entra ID Governance** [license][13] is required. Most features are covered by Entrai ID Premium P2, but the most advanced require this license.
+
+> As of the writing of this page
+
+- Entitlement management advanced features
+  - Verified ID
+  - Custom extensions (Logic Apps)
+  - Auto assignment
+  - Directly assign any user
+  - Guest conversion API
+  - Sponsors policy
+- Access reviews advanced features
+  - PIM for Groups
+  - Inactive Users reviews
+  - Machine learning assisted access certifications and reviews
+- Lifecycle Workflows (LCW)
+- LCW + Custom extensions
+
+### Lifecycle Workflows (LCW)
+
+A security group called `LifecycleTestGroup` will be created, as well with a Logic App `logic-lifecycle-task` and a user `newuser`.
+
+To use a Logic App with LCW, few [requirements must be met][14]. It might be easier to create a Logic App using the LCW console.
+
+These resources can be used to create a lifecycle workflow:
+
+1. Create (or use the existing) logic app as a custom extension for LCW
+2. Create a new workflow from a template
+3. Trigger the workflow (on-demand, or via schedule)
+
+The user `department` will be `Marketing` for this exercise.
+
+> The schedule time applies for the whole service, and the default settings is 3h (minimum 1h)
+
+Here is an example with custom extension task:
+
+<img src=".img/entra-lcw-tasks.png" />
+
+Sample of final results after execution. Additional information is required for it work completely, such as the `manager` and `email` attribute.
+
+<img src=".img/entra-lcw-execution.png" />
+
 ---
 
 ### Clean-up
@@ -227,3 +271,5 @@ terraform destroy -auto-approve
 [10]: https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-sync-attributes-synchronized
 [11]: https://myaccess.microsoft.com/
 [12]: https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/custom-create#prerequisites
+[13]: https://learn.microsoft.com/en-us/entra/id-governance/licensing-fundamentals#features-by-license
+[14]: https://learn.microsoft.com/en-us/entra/id-governance/configure-logic-app-lifecycle-workflows

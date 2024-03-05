@@ -16,3 +16,7 @@ variable "create_conditional_policy" {
 variable "conditional_policy_named_location_ips" {
   type = list(string)
 }
+
+variable "location" {
+  type = string
+}
