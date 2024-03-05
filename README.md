@@ -19,7 +19,7 @@ terraform init
 terraform apply -auto-approve
 ```
 
-## Password rest
+## Password reset
 
 ### Self-service password reset
 
