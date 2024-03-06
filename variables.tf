@@ -7,6 +7,10 @@ variable "generic_password" {
   sensitive = true
 }
 
+variable "create_access_review" {
+  type = bool
+}
+
 variable "create_conditional_policy" {
   description = "Rather or not to create the policy, since it requires security defaults to be disabled."
   type        = bool
@@ -19,4 +23,8 @@ variable "conditional_policy_named_location_ips" {
 
 variable "location" {
   type = string
+}
+
+variable "create_lcw" {
+  type = bool
 }

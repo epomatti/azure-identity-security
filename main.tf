@@ -28,6 +28,7 @@ module "named_location" {
 }
 
 module "access_review" {
+  count                 = var.create_access_review ? 1 : 0
   source                = "./modules/access-review"
   entraid_tenant_domain = var.entraid_tenant_domain
 }
@@ -46,11 +47,16 @@ resource "azurerm_resource_group" "lifecycleworkflow" {
 }
 
 module "lifecycle_workflow" {
+  count                 = var.create_lcw ? 1 : 0
   source                = "./modules/lifecycle-workflow"
   entraid_tenant_domain = var.entraid_tenant_domain
   location              = var.location
   resource_group_name   = azurerm_resource_group.lifecycleworkflow.name
 }
+
+# module "access_packages" {
+#   source = "./modules/access-packages"
+# }
 
 ### Scenarios ###
 module "scenario_adding_stuff_to_groups" {
